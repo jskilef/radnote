@@ -2,13 +2,15 @@
 
 A standalone radiology report editor. German is the default language, with an English switch. Runs directly in a browser, without a backend or external dependencies.
 
-**Current version: 1.0.0**
+**Current version: 1.1.0**
 
 **Live editor:** https://jskilef.github.io/radnote/
 
 ## Features
 
-- Structured reports and a freestyle template with one text box.
+- Structured reports, a combined “Befund und Beurteilung” template, and a freestyle template with one text box.
+- A copy button beside each report field, copying only that field’s text.
+- Custom templates with named, reorderable fields and optional default text. Create, edit, or delete them using the template controls. Templates are saved in this browser; enable draft saving to retain entered report text as well. Default text is restored in new reports, together with frozen selections.
 - Custom macros: type a shortcut such as `.pleura` and press Tab.
 - Placeholder navigation with F2.
 - Freeze selected words, phrases, or sentences to protect them and retain them in new reports. Click the lock chip to unfreeze.
@@ -35,6 +37,10 @@ See [the clinical and data notice](CLINICAL_NOTICE.md) for the German/English us
 ## Deployment
 
 GitHub Pages serves the root of the `main` branch. `.nojekyll` enables direct static hosting. Update `index.html` and push to `main` to publish a change.
+
+## Validation
+
+Install development dependencies with `npm install`, then install a browser with `npx playwright install chromium` and run `npm test`. To use an existing browser, set `RADNOTE_CHROMIUM_PATH` to its executable path. No dependencies are needed to use the editor itself.
 
 ## Versioning and releases
 

@@ -1,15 +1,15 @@
-# Radnote v1.0.0
+# Radnote v1.1.0
 
-Initial release of a standalone radiology report editor.
+Copy individual fields and use custom report templates.
 
-- German default with German/English switching.
-- Structured reports and a single-box freestyle template.
-- Custom macros with Tab expansion and F2 placeholder navigation.
-- Frozen text retained when creating new reports.
-- JSON macro library import and export.
-- MIT License, embedded license dialog, and German/English clinical and data notices.
-- Copy, plain-text export, printing/PDF, and optional browser draft saving.
+- A copy button beside every report field copies its text without headings or other fields.
+- New “Befund und Beurteilung” template combines findings and impression, retaining clinical indication, technique, and comparison.
+- Create, edit, reorder, and delete custom template fields; optionally supply default text.
+- Custom templates are saved on the device and support macros, frozen text, report export, printing, and optional draft saving.
+- New reports restore custom default text and retain frozen selections.
 
-Open the live editor at https://jskilef.github.io/radnote/ or download `radiology-editor-v1.0.0.html` and open it locally.
+[Live editor](https://jskilef.github.io/radnote/) · [Standalone HTML](https://github.com/jskilef/radnote/raw/refs/tags/v1.1.0/index.html)
 
-Validation: browser tests passed for language switching, frozen text protection and retention, unfreezing, freestyle reports, macro expansion, macro file import/export, invalid-file rejection, and report export.
+Validation: browser tests passed for language switching, field copying, combined templates, custom template creation/editing/reordering/deletion, default text, macros, frozen selections, saved drafts, macro files, and report export.
+
+MIT licensed. Clinical and data notices remain available in the editor and repository.
