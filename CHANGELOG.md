@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.3.0 — 2026-10-06
+
+- Made macro settings and keyboard shortcut panels collapsible, remembering their state.
+- Added an Undo button and Ctrl/Cmd+Z, with Ctrl/Cmd+Shift+Z for redo.
+- Included report text, macro expansions, frozen selections, and new-report resets in undo history.
+- Added browser coverage for undo, redo, saved drafts, and collapsible panels.
+
 ## 1.2.0 — 2026-10-06
 
 - Added word-expansion macros triggered by Space, including `re` → `rechts`.

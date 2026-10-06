@@ -1,12 +1,13 @@
-# Radnote v1.2.0
+# Radnote v1.3.0
 
-Add word expansions alongside existing Tab macros.
+Collapsible shortcut settings and undo for reports.
 
-- Type `re` and press Space to insert `rechts `.
-- Choose **Wortersetzung (Kürzel + Leertaste)** when adding or editing a macro to create your own word shortcuts.
-- Word expansion matches whole words, respects cursor position, and protects frozen text.
-- Word macros are stored locally and included in JSON macro files; existing Tab macros and old macro files remain supported.
+- Collapse or expand the macro settings and keyboard shortcut guide; your preference is remembered.
+- Undo with the **Rückgängig / Undo** button or **Ctrl/Cmd+Z**.
+- Redo with **Ctrl/Cmd+Shift+Z**.
+- Undo restores typed text, macro insertions, frozen selections, and reports cleared with New report, including patient reference.
+- Undo history remains in memory for the session, up to 200 changes. Reloading or changing custom template definitions resets it.
 
-[Live editor](https://jskilef.github.io/radnote/) · [Standalone HTML](https://github.com/jskilef/radnote/raw/refs/tags/v1.2.0/index.html)
+[Live editor](https://jskilef.github.io/radnote/) · [Standalone HTML](https://github.com/jskilef/radnote/raw/refs/tags/v1.3.0/index.html)
 
-Validation: all three browser suites passed, covering existing report workflows, templates, Space expansion, word boundaries, frozen text, persistence, and old/new macro file formats.
+Validation: all four browser suites passed, including macro expansion, templates, frozen text, copying, saved drafts, undo/redo, and panel preferences.

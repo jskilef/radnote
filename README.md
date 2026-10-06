@@ -2,7 +2,7 @@
 
 A standalone radiology report editor. German is the default language, with an English switch. Runs directly in a browser, without a backend or external dependencies.
 
-**Current version: 1.2.0**
+**Current version: 1.3.0**
 
 **Live editor:** https://jskilef.github.io/radnote/
 
@@ -18,6 +18,9 @@ A standalone radiology report editor. German is the default language, with an En
 - Save and load macro libraries as JSON files. Import merges by shortcut, replacing matching codes while preserving other macros. Invalid files are rejected.
 - Copy reports, export plain text, and print or save as PDF.
 - Optional draft storage in the browser, including template and frozen selections.
+
+- Collapsible macro settings and keyboard shortcut panels; their open/closed state is remembered.
+- Undo report changes with the Undo button or Ctrl/Cmd+Z; Ctrl/Cmd+Shift+Z redoes them. Report history includes macro expansions, frozen selections, and new-report resets. History is limited to the latest 200 changes and resets on reload or when changing custom template definitions.
 
 ## Use locally
 
