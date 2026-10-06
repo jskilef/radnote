@@ -2,7 +2,7 @@
 
 A standalone radiology report editor. German is the default language, with an English switch. Runs directly in a browser, without a backend or external dependencies.
 
-**Current version: 1.1.0**
+**Current version: 1.2.0**
 
 **Live editor:** https://jskilef.github.io/radnote/
 
@@ -11,7 +11,8 @@ A standalone radiology report editor. German is the default language, with an En
 - Structured reports, a combined “Befund und Beurteilung” template, and a freestyle template with one text box.
 - A copy button beside each report field, copying only that field’s text.
 - Custom templates with named, reorderable fields and optional default text. Create, edit, or delete them using the template controls. Templates are saved in this browser; enable draft saving to retain entered report text as well. Default text is restored in new reports, together with frozen selections.
-- Custom macros: type a shortcut such as `.pleura` and press Tab.
+- Two macro types: `.pleura` + Tab inserts a report macro; `re` + Space expands to `rechts `, including the trailing space.
+- Choose “Word expansion” when adding or editing a macro to define your own Space shortcuts. Matching is case-sensitive and applies to the whole word before the cursor. Existing Tab macros and legacy JSON files remain supported.
 - Placeholder navigation with F2.
 - Freeze selected words, phrases, or sentences to protect them and retain them in new reports. Click the lock chip to unfreeze.
 - Save and load macro libraries as JSON files. Import merges by shortcut, replacing matching codes while preserving other macros. Invalid files are rejected.

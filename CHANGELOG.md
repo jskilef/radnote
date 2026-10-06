@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.0 — 2026-10-06
+
+- Added word-expansion macros triggered by Space, including `re` → `rechts`.
+- Added a macro type selector and trigger labels in the library.
+- Preserved word macro types in JSON import/export and local storage, with support for legacy Tab macro files.
+- Protected frozen selections from macro expansion.
+- Added tests for word boundaries, cursor positions, Space input, persistence, and compatibility.
+
 ## 1.1.0 — 2026-10-05
 
 - Added copy buttons beside every report field.
