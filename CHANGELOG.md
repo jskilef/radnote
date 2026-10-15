@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.4.0 — 2026-10-15
+
+- Added a universal arterial MR angiography module with 12 selectable regions and 101 uniquely identified vessel segments.
+- Added region-dependent, deduplicated vessel matrices with side-specific status and multiple lesions per vessel.
+- Added German rule-based findings and impression, explicit normal marking, stenosis validation, documented runoff rules, and optional pathology details.
+- Preserved manually edited previews and existing report text; added explicit append/replace transfer with frozen-text protection.
+- Integrated structured findings with existing local draft storage, undo, and new-report resets.
+- Added System/Light/Dark appearance shared by the editor and module.
+- Separated anatomy, examination configuration/state/generation, UI, integration, and standalone HTML build sources.
+- Added anatomy/generation tests and end-to-end browser tests; retained all previous browser suites.
+
 ## 1.3.0 — 2026-10-06
 
 - Made macro settings and keyboard shortcut panels collapsible, remembering their state.

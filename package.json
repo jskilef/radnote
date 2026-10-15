@@ -1,11 +1,12 @@
 {
   "name": "radnote",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "private": true,
   "description": "Standalone radiology report editor",
   "license": "MIT",
   "scripts": {
-    "test": "node tests/report-editor.cjs && node tests/templates.cjs && node tests/word-macros.cjs && node tests/undo.cjs"
+    "test": "npm run build && node tests/mra-engine.cjs && node tests/report-editor.cjs && node tests/templates.cjs && node tests/word-macros.cjs && node tests/undo.cjs && node tests/mra-ui.cjs",
+    "build": "node scripts/build.cjs"
   },
   "devDependencies": {
     "playwright": "1.62.1"

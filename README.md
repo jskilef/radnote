@@ -2,7 +2,7 @@
 
 A standalone radiology report editor. German is the default language, with an English switch. Runs directly in a browser, without a backend or external dependencies.
 
-**Current version: 1.3.0**
+**Current version: 1.4.0**
 
 **Live editor:** https://jskilef.github.io/radnote/
 
@@ -22,6 +22,20 @@ A standalone radiology report editor. German is the default language, with an En
 - Collapsible macro settings and keyboard shortcut panels; their open/closed state is remembered.
 - Undo report changes with the Undo button or Ctrl/Cmd+Z; Ctrl/Cmd+Shift+Z redoes them. Report history includes macro expansions, frozen selections, and new-report resets. History is limited to the latest 200 changes and resets on reload or when changing custom template definitions.
 
+## MR-Angiographie
+
+Das aufklappbare Modul **MR-Angiographie · strukturierter Befund** unterstützt arterielle Untersuchungen von Kopf, Hals, thorakaler und abdomineller Aorta, Viszeral- und Nierenarterien, Becken, Beinen, Füßen und beiden oberen Extremitäten.
+
+1. Nur die tatsächlich untersuchten Regionen auswählen. Es werden ausschließlich die zugehörigen Gefäßabschnitte angezeigt; gemeinsam zugeordnete Gefäße erscheinen einmal.
+2. Gefäße einzeln oder eine Region ausdrücklich als unauffällig markieren. Optionale Abschnitte werden nicht automatisch eingeschlossen.
+3. Für Pathologien eine oder mehrere Läsionen mit Stenosegrad, Morphologie und optionalen Zusatzangaben erfassen.
+4. Befund und Beurteilung in der Live-Vorschau prüfen und bei Bedarf manuell bearbeiten.
+5. Über **In Befund und Beurteilung übernehmen** die Texte ausdrücklich anhängen oder ersetzen. Bereits übernommene Editor-Texte werden nicht automatisch verändert; Fixierungen bleiben geschützt.
+
+Die bestehende Option zur lokalen Entwurfsspeicherung speichert auch Regionen, strukturierte Gefäßbefunde und Vorschautexte. Der gemeinsame Rückgängig-Verlauf umfasst das Modul. **System / Hell / Dunkel** wählt die Darstellung. Die MRA-Befundtexte sind deutsch.
+
+[Architektur, Datenmodell und Textregeln](mra/README.md)
+
 ## Use locally
 
 Download `index.html` or the standalone HTML release asset and open it in a browser. No installation is needed.
@@ -39,6 +53,8 @@ Report text stays in the browser unless you copy, export, or print it. Enabling 
 See [the clinical and data notice](CLINICAL_NOTICE.md) for the German/English usage notes. These notes do not add restrictions to the MIT License. The standalone HTML includes the full license in its “License & usage” dialog.
 
 ## Deployment
+
+Run `npm run build` after source changes. `src/editor.html` and `mra/` are the editable sources; the build embeds them into the standalone `index.html`. No new runtime dependencies are required.
 
 GitHub Pages serves the root of the `main` branch. `.nojekyll` enables direct static hosting. Update `index.html` and push to `main` to publish a change.
 
