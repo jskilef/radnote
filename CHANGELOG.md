@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.6.0 — 2026-10-15
+
+- Expanded JSON backup to macros, custom template definitions/defaults, structured chest favorites and personal settings, with legacy macro-file compatibility.
+- Added validated merging, preserved existing report text, and kept conflicting templates as separate copies.
+- Added an independent Configuration panel and persisted selected template/builder and chest preview preferences even without a saved report draft.
+- Replaced the two prominent builder launch panels with one compact dropdown. Only the selected builder is visible; switching preserves each examination and preview.
+- Kept chest report style and automatic-preview preference when starting a new report.
+- Added configuration validation/merge tests and full browser round trips, conflict, unchanged-report, reload and mobile coverage; updated all existing regression suites.
+
 ## 1.5.0 — 2026-10-15
 
 - Added a fully integrated chest radiograph report builder with one combined report text and no separate impression output.

@@ -1,16 +1,12 @@
-# Radnote v1.5.0 — Röntgen-Thorax-Befundbaukasten
+# Radnote v1.6.0 — Konfiguration sichern und kompakte Baukastenauswahl
 
-Ein integrierter, regelbasierter Baukasten mit genau **einem gemeinsamen Befundtext**. Keine separate Beurteilung.
+- **Konfiguration speichern / laden** sichert Textbausteine einschließlich Wortkürzeln, Kategorien und Favoriten, alle eigenen Vorlagen mit Feldreihenfolge und Standardtexten, strukturierte Thorax-Favoriten sowie Sprache, Darstellung und Bedienungseinstellungen.
+- Einstellungen umfassen die ausgewählte Vorlage, den Baukasten, aufgeklappte Seitenleistenbereiche, die Entwurfsspeicherung sowie Thorax-Befundstil und automatische Vorschau.
+- Bisherige Textbaustein-Dateien bleiben kompatibel. Bibliotheken werden zusammengeführt, gleiche Makrokürzel aktualisiert und abweichende Vorlagen als zusätzliche Kopien erhalten. Ungültige Dateien werden vor Änderungen abgewiesen.
+- Aktuelle Befundtexte bleiben beim Import erhalten und werden weiterhin über die separate lokale Entwurfsspeicherung gesichert.
+- **Ein Dropdown für alle Baukästen:** Kein Baukasten / Röntgen-Thorax / MR-Angiographie. Sichtbar ist nur die Auswahl; Eingaben und manuelle Vorschauen bleiben beim Wechsel erhalten.
+- Ohne neue Laufzeitabhängigkeiten, weiterhin eine eigenständige HTML-Datei mit Hell-/Dunkeldarstellung und mobiler Bedienung.
 
-- Anatomische Kategorien von Herz und Pleura bis Skelett, Weichteilen und Devices; wiederholbare und seitengenaue Befunde.
-- Bewusster Normalbefund, strukturierte Schnellwahlen, persönliche Favoriten und die Stile Kurz / Standard / Ausführlich.
-- Projektionsabhängige Herzbeurteilung, dokumentierte Device-Lagen, Voraufnahmenvergleich und Verlaufsangaben.
-- Diagnostische Vorschläge erscheinen nur mit passender Grundlage und werden erst nach Bestätigung eingefügt.
-- Eigene Textbausteine bleiben in der vorhandenen Makroverwaltung, einschließlich Kategorien, Favoriten und JSON-Dateiaustausch.
-- Rechts eine manuell bearbeitbare Ein-Textfeld-Vorschau mit Sicherung/Wiederherstellung. Geschützte Übernahme ausschließlich ins vorhandene Befundfeld.
-- Speicherung und Rückgängig im bestehenden Editor; Hell-/Dunkel-Darstellung und mobile Bedienung.
-- Keine externe KI-API oder neue Laufzeitabhängigkeit; die HTML-Datei bleibt vollständig eigenständig.
+[Live-Editor](https://jskilef.github.io/radnote/) · [HTML-Datei](https://github.com/jskilef/radnote/raw/refs/tags/v1.6.0/index.html) · [Konfigurationsformat](https://github.com/jskilef/radnote/blob/v1.6.0/settings/README.md)
 
-[Live editor](https://jskilef.github.io/radnote/) · [Standalone HTML](https://github.com/jskilef/radnote/raw/refs/tags/v1.5.0/index.html) · [Architektur und Regeln](https://github.com/jskilef/radnote/blob/v1.5.0/chest/README.md)
-
-Validierung: Thorax-Regeltests und neuer Browser-Bedienungstest sowie sämtliche bisherigen MRA- und Editor-Tests.
+Validierung: Konfigurations- und Konflikttests, vollständiger Export-/Import-Rundlauf in einem frischen Browser, Schutz vorhandener Texte, Neuladen und Mobilansicht sowie alle bisherigen Editor-, Thorax- und MR-Angiographie-Tests.

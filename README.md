@@ -2,7 +2,7 @@
 
 A standalone radiology report editor. German is the default language, with an English switch. Runs directly in a browser, without a backend or external dependencies.
 
-**Current version: 1.5.0**
+**Current version: 1.6.0**
 
 **Live editor:** https://jskilef.github.io/radnote/
 
@@ -15,7 +15,10 @@ A standalone radiology report editor. German is the default language, with an En
 - Choose “Word expansion” when adding or editing a macro to define your own Space shortcuts. Matching is case-sensitive and applies to the whole word before the cursor. Existing Tab macros and legacy JSON files remain supported.
 - Placeholder navigation with F2.
 - Freeze selected words, phrases, or sentences to protect them and retain them in new reports. Click the lock chip to unfreeze.
-- Save and load macro libraries as JSON files. Import merges by shortcut, replacing matching codes while preserving other macros. Invalid files are rejected.
+- Save and restore the complete personal configuration as one JSON file: macros (including Space shortcuts, categories and favorites), all custom templates with field order/default text, structured chest favorites, language, theme, selected template/builder, panel visibility, draft-saving preference, chest report style and automatic preview setting.
+- Use **Configuration → Save configuration / Load configuration** in the sidebar. Import merges libraries, replaces matching macro codes, retains conflicting template definitions as additional copies, and applies imported settings. Current report text is preserved. Legacy macro JSON files remain supported; invalid files are rejected before changes.
+- A compact **Report builder** dropdown selects Chest radiograph, MR angiography, or No builder. Only the selected builder is visible; switching preserves structured findings and manually edited previews. The selection is remembered.
+- Patient/reference values, current reports, frozen report selections and examination findings are stored separately through optional local draft saving; these are not included in a configuration backup.
 - Copy reports, export plain text, and print or save as PDF.
 - Optional draft storage in the browser, including template and frozen selections.
 
@@ -24,7 +27,7 @@ A standalone radiology report editor. German is the default language, with an En
 
 ## Röntgen-Thorax
 
-Der aufklappbare **Röntgen-Thorax-Befundbaukasten** erzeugt genau einen gemeinsamen Befundtext ohne separates Beurteilungsfeld. Links befinden sich kompakte anatomische Kategorien, rechts die bearbeitbare Live-Vorschau.
+Der über das Dropdown **Baukasten → Röntgen-Thorax** auswählbare Befundbaukasten erzeugt genau einen gemeinsamen Befundtext ohne separates Beurteilungsfeld. Links befinden sich kompakte anatomische Kategorien, rechts die bearbeitbare Live-Vorschau.
 
 - Bewusst aktivierter Normalbefund, strukturierte Schnellwahlen, eigene dauerhaft gespeicherte Favoriten und drei Befundstile.
 - Herz, Mediastinum/Aorta, Stauung, Parenchym, Atelektasen, Pleura, Überblähung, Bronchien, Hili, Zwerchfell, Skelett, Weichteile und typabhängige Device-Angaben.
@@ -35,6 +38,8 @@ Der aufklappbare **Röntgen-Thorax-Befundbaukasten** erzeugt genau einen gemeins
 - Lokale Entwurfsspeicherung, Rückgängig und vorhandene Themes sind integriert.
 
 [Thorax-Architektur, Datenmodell und Textregeln](chest/README.md)
+
+[Konfigurationsformat und Importregeln](settings/README.md)
 
 ## MR-Angiographie
 
