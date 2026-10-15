@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.7.0 — 2026-10-15
+
+- Added integrated Head CT, universal skeletal radiography, and esophagram report builders to the existing compact selector.
+- Reused the existing examination components and styles; added a shared registry, schema-validated state, clinical validation, text helpers, preview, favorites and transfer behavior.
+- Added all four head CT modes, repeated intracranial findings, explicit normal marking, independent hemispheric ASPECTS and conditional acute-report prioritization.
+- Added 21 skeletal regions, regional projections/options and fracture masks, implants, spinal segments, protected classifications and independent regional state.
+- Added routine/achalasia and all required postoperative esophagram modes, documented reconstruction anatomy, passage, diverticula, reflux and extravasation rules.
+- Included all new structured states in undo and optional local drafts. Shared protected field transfer preserves existing text and frozen spans.
+- Extended configuration export to schema v2 with the new structured favorites and per-module preview preferences; retained schema v1 and legacy macro imports.
+- Added 43 clinical/model rule tests and a complete browser workflow suite; updated existing tests to scope reused components.
+
 ## 1.6.0 — 2026-10-15
 
 - Expanded JSON backup to macros, custom template definitions/defaults, structured chest favorites and personal settings, with legacy macro-file compatibility.

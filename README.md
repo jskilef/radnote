@@ -2,7 +2,7 @@
 
 A standalone radiology report editor. German is the default language, with an English switch. Runs directly in a browser, without a backend or external dependencies.
 
-**Current version: 1.6.0**
+**Current version: 1.7.0**
 
 **Live editor:** https://jskilef.github.io/radnote/
 
@@ -15,15 +15,27 @@ A standalone radiology report editor. German is the default language, with an En
 - Choose “Word expansion” when adding or editing a macro to define your own Space shortcuts. Matching is case-sensitive and applies to the whole word before the cursor. Existing Tab macros and legacy JSON files remain supported.
 - Placeholder navigation with F2.
 - Freeze selected words, phrases, or sentences to protect them and retain them in new reports. Click the lock chip to unfreeze.
-- Save and restore the complete personal configuration as one JSON file: macros (including Space shortcuts, categories and favorites), all custom templates with field order/default text, structured chest favorites, language, theme, selected template/builder, panel visibility, draft-saving preference, chest report style and automatic preview setting.
+- Save and restore the complete personal configuration as one JSON file: macros (including Space shortcuts, categories and favorites), all custom templates with field order/default text, structured favorites for all report builders, language, theme, selected template/builder, panel visibility, draft-saving preference, report style and automatic preview settings for the chest and new examination modules.
 - Use **Configuration → Save configuration / Load configuration** in the sidebar. Import merges libraries, replaces matching macro codes, retains conflicting template definitions as additional copies, and applies imported settings. Current report text is preserved. Legacy macro JSON files remain supported; invalid files are rejected before changes.
-- A compact **Report builder** dropdown selects Chest radiograph, MR angiography, or No builder. Only the selected builder is visible; switching preserves structured findings and manually edited previews. The selection is remembered.
+- A compact **Report builder** dropdown selects Chest radiograph, MR angiography, Head CT, Skeletal radiography, Esophagram, or No builder. Only the selected builder is visible; switching preserves structured findings and manually edited previews. The selection is remembered.
 - Patient/reference values, current reports, frozen report selections and examination findings are stored separately through optional local draft saving; these are not included in a configuration backup.
 - Copy reports, export plain text, and print or save as PDF.
 - Optional draft storage in the browser, including template and frozen selections.
 
 - Collapsible macro settings and keyboard shortcut panels; their open/closed state is remembered.
 - Undo report changes with the Undo button or Ctrl/Cmd+Z; Ctrl/Cmd+Shift+Z redoes them. Report history includes macro expansions, frozen selections, and new-report resets. History is limited to the latest 200 changes and resets on reload or when changing custom template definitions.
+
+## CT Schädel, Röntgen-Skelett und Breischluck
+
+Drei weitere vollständig integrierte Baukästen sind über dasselbe Dropdown erreichbar:
+
+- **CT Schädel:** Routine/Trauma/Stroke/Verlauf, Blutungen und Infarkte, Liquorräume/Masseneffekt, Raumforderungen, Kalotte, Nebenhöhlen, Gefäßverkalkungen und beidseitige ASPECTS-Bewertung. Befund und Beurteilung getrennt.
+- **Röntgen-Skelett:** 21 Regionen, regionsabhängige Befunde/Projektionen, Frakturmasken, Implantate, Wirbelsäulensegmente und geprüfte Voraussetzungen für Garden/Weber/Meyerding. Ein gemeinsamer Text.
+- **Breischluck:** Routine, Achalasie, POEM, Z-POEM, Fundoplikatio, Ösophagektomie und weitere postoperative Kontrollen. Passage, Morphologie, Stenosen, Divertikel, Hernien, Reflux und Extravasation; Befund und Beurteilung getrennt.
+
+Gemeinsame Komponenten verwenden strukturierte Favoriten, drei Stile, Voraufnahmenvergleich, geschützte manuelle Vorschauen, Anhängen/Ersetzen/Abbrechen, Fixierungen, Rückgängig und die vorhandene Entwurfsspeicherung. Die Konfigurationsdatei enthält auch die neuen Favoriten und Vorschau-Einstellungen. Nicht beurteilte Strukturen erzeugen keine Normaltexte.
+
+[Architektur, Datenmodelle, medizinische Regeln, Tests und Grenzen](builders/README.md)
 
 ## Röntgen-Thorax
 
