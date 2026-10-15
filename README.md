@@ -2,7 +2,7 @@
 
 A standalone radiology report editor. German is the default language, with an English switch. Runs directly in a browser, without a backend or external dependencies.
 
-**Current version: 1.4.0**
+**Current version: 1.4.1**
 
 **Live editor:** https://jskilef.github.io/radnote/
 

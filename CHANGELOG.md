@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.1 — 2026-10-15
+
+- Preserved the stable MR angiography study value when switching language, transferring generated text, and reloading drafts.
+- Added explicit transfer/reload coverage for the examination type.
+
 ## 1.4.0 — 2026-10-15
 
 - Added a universal arterial MR angiography module with 12 selectable regions and 101 uniquely identified vessel segments.
