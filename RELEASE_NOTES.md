@@ -1,16 +1,16 @@
-# Radnote v1.4.1 — Universelle arterielle MR-Angiographie
+# Radnote v1.5.0 — Röntgen-Thorax-Befundbaukasten
 
-- Auswahl aus 12 untersuchten Körperregionen; 101 eindeutig identifizierte Gefäßabschnitte einschließlich Kopf/Hals, Aorta, Viszeral-/Nierenarterien, Becken/Beinen/Füßen und oberen Extremitäten.
-- Dynamische, deduplizierte Rechts-links-Übersicht. Kein automatischer Normalbefund für unbeurteilte oder nicht untersuchte Gefäße.
-- Mehrere Läsionen pro Gefäß mit Stenosegrad, weiteren Pathologien und optionalen Maß-, Ausdehnungs- und Abstromangaben.
-- Deutsche Live-Vorschau mit getrenntem Befund und priorisierter Beurteilung.
-- Schutz manueller Texte; ausdrückliches Anhängen/Ersetzen im vorhandenen Editor unter Berücksichtigung fixierter Textstellen.
-- Speicherung und Wiederherstellung mit dem bestehenden Entwurf, gemeinsames Rückgängig und vollständiger Modulreset.
-- System-/Hell-/Dunkel-Darstellung und mobile Rechts-links-Matrix.
-- Wiederverwendbare Anatomiedefinitionen und getrennte regelbasierte Erzeugung ohne neue Laufzeitabhängigkeiten. Die veröffentlichte HTML-Datei bleibt vollständig eigenständig.
+Ein integrierter, regelbasierter Baukasten mit genau **einem gemeinsamen Befundtext**. Keine separate Beurteilung.
 
-[Live editor](https://jskilef.github.io/radnote/) · [Standalone HTML](https://github.com/jskilef/radnote/raw/refs/tags/v1.4.1/index.html) · [Architektur und Textregeln](https://github.com/jskilef/radnote/blob/v1.4.1/mra/README.md)
+- Anatomische Kategorien von Herz und Pleura bis Skelett, Weichteilen und Devices; wiederholbare und seitengenaue Befunde.
+- Bewusster Normalbefund, strukturierte Schnellwahlen, persönliche Favoriten und die Stile Kurz / Standard / Ausführlich.
+- Projektionsabhängige Herzbeurteilung, dokumentierte Device-Lagen, Voraufnahmenvergleich und Verlaufsangaben.
+- Diagnostische Vorschläge erscheinen nur mit passender Grundlage und werden erst nach Bestätigung eingefügt.
+- Eigene Textbausteine bleiben in der vorhandenen Makroverwaltung, einschließlich Kategorien, Favoriten und JSON-Dateiaustausch.
+- Rechts eine manuell bearbeitbare Ein-Textfeld-Vorschau mit Sicherung/Wiederherstellung. Geschützte Übernahme ausschließlich ins vorhandene Befundfeld.
+- Speicherung und Rückgängig im bestehenden Editor; Hell-/Dunkel-Darstellung und mobile Bedienung.
+- Keine externe KI-API oder neue Laufzeitabhängigkeit; die HTML-Datei bleibt vollständig eigenständig.
 
-Zusätzlich bleiben Untersuchungsart und sprachunabhängiger Auswahlwert bei Textübernahme und Entwurf-Wiederherstellung stabil.
+[Live editor](https://jskilef.github.io/radnote/) · [Standalone HTML](https://github.com/jskilef/radnote/raw/refs/tags/v1.5.0/index.html) · [Architektur und Regeln](https://github.com/jskilef/radnote/blob/v1.5.0/chest/README.md)
 
-Validierung: Anatomie-/Textregeltests, neue MRA-Browsertests für Regionen, Läsionen, Speicherung, manuelle Texte, Übernahme, Fixierungen, Undo, Reset, Dark Mode und mobile Darstellung sowie die vier bisherigen Browser-Suiten.
+Validierung: Thorax-Regeltests und neuer Browser-Bedienungstest sowie sämtliche bisherigen MRA- und Editor-Tests.

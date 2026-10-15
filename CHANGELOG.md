@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.5.0 — 2026-10-15
+
+- Added a fully integrated chest radiograph report builder with one combined report text and no separate impression output.
+- Added all anatomical categories, repeated parenchymal/atelectatic/fracture/device findings, side-specific pleura, projection-sensitive wording, comparison, and three report styles.
+- Added explicit normal activation, structural quick presets, personal favorites, and confirmed diagnostic suggestions.
+- Extended existing macros with categories and favorites, preserving JSON import/export compatibility and a single text-block source.
+- Added protected manual preview versions, recovery, copy, and append/replace/cancel transfer into the existing findings field while preserving impression.
+- Included the builder in local drafts, undo, new-report resets, existing themes and responsive UI.
+- Added pure clinical-rule tests and end-to-end browser tests; retained all previous regression suites.
+
 ## 1.4.1 — 2026-10-15
 
 - Preserved the stable MR angiography study value when switching language, transferring generated text, and reloading drafts.

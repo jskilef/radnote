@@ -2,7 +2,7 @@
 
 A standalone radiology report editor. German is the default language, with an English switch. Runs directly in a browser, without a backend or external dependencies.
 
-**Current version: 1.4.1**
+**Current version: 1.5.0**
 
 **Live editor:** https://jskilef.github.io/radnote/
 
@@ -21,6 +21,20 @@ A standalone radiology report editor. German is the default language, with an En
 
 - Collapsible macro settings and keyboard shortcut panels; their open/closed state is remembered.
 - Undo report changes with the Undo button or Ctrl/Cmd+Z; Ctrl/Cmd+Shift+Z redoes them. Report history includes macro expansions, frozen selections, and new-report resets. History is limited to the latest 200 changes and resets on reload or when changing custom template definitions.
+
+## Röntgen-Thorax
+
+Der aufklappbare **Röntgen-Thorax-Befundbaukasten** erzeugt genau einen gemeinsamen Befundtext ohne separates Beurteilungsfeld. Links befinden sich kompakte anatomische Kategorien, rechts die bearbeitbare Live-Vorschau.
+
+- Bewusst aktivierter Normalbefund, strukturierte Schnellwahlen, eigene dauerhaft gespeicherte Favoriten und drei Befundstile.
+- Herz, Mediastinum/Aorta, Stauung, Parenchym, Atelektasen, Pleura, Überblähung, Bronchien, Hili, Zwerchfell, Skelett, Weichteile und typabhängige Device-Angaben.
+- Projektion und Beurteilbarkeit beeinflussen Formulierungen. Diagnostische Vorschläge werden nur nach Bestätigung eingefügt.
+- Optionaler Voraufnahmenvergleich mit Verlauf je Befund bzw. Merkmal.
+- Eigene Textbausteine nutzen die vorhandene Makroverwaltung, einschließlich Kategorien, Favoriten und JSON-Dateiaustausch.
+- Geschützte manuelle Vorschau mit wiederherstellbarer Fassung; Anhängen, Ersetzen oder Abbrechen bei vorhandenem Zieltext. Die bestehende Beurteilung bleibt unverändert.
+- Lokale Entwurfsspeicherung, Rückgängig und vorhandene Themes sind integriert.
+
+[Thorax-Architektur, Datenmodell und Textregeln](chest/README.md)
 
 ## MR-Angiographie
 
@@ -54,7 +68,7 @@ See [the clinical and data notice](CLINICAL_NOTICE.md) for the German/English us
 
 ## Deployment
 
-Run `npm run build` after source changes. `src/editor.html` and `mra/` are the editable sources; the build embeds them into the standalone `index.html`. No new runtime dependencies are required.
+Run `npm run build` after source changes. `src/editor.html`, `mra/` and `chest/` are the editable sources; the build embeds them into the standalone `index.html`. No new runtime dependencies are required.
 
 GitHub Pages serves the root of the `main` branch. `.nojekyll` enables direct static hosting. Update `index.html` and push to `main` to publish a change.
 
