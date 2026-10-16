@@ -1,6 +1,6 @@
 # Radnote audit — 16 October 2026
 
-Scope: source and generated standalone application, based on v1.7.0 at commit `3943db1043e9caffb0444e257b6c6f5e4a65c768`. Corrections are included in the repository after v1.7.0. They do not create a new tagged release.
+Scope: source and generated standalone application, based on v1.7.0 at commit `3943db1043e9caffb0444e257b6c6f5e4a65c768`. Corrections are included in patch release v1.7.1.
 
 The existing test suite passed before changes. Additional adversarial cases reproduced the defects below. All seven finding groups have corrections and regression coverage. Severity reflects potential impact on generated reports, rather than a security CVSS score.
 
@@ -18,7 +18,7 @@ Implementation is in `builders/generator.js`, the three examination generators, 
 
 ## Verification
 
-Final result: the complete suite exited successfully after the corrections, all 27 embedded scripts parsed, and `git diff --check` passed. The standalone audited HTML has SHA-256 `1374069de324d6b75fe4c7fcb8e37f537f0ff1d387eb385d6e88e1a58d8e96f9`.
+Final result: the complete suite exited successfully after the corrections, all 27 embedded scripts parsed, and `git diff --check` passed. The standalone audited HTML has SHA-256 `ab7023e4efaa8516667360d4bd898485186aff1af2cb7e69201e8f0a7e5506f9`.
 
 Run the complete suite with:
 
@@ -42,4 +42,4 @@ The pre-change passing suite is recorded in `/workspace/radnote-audit/radnote-au
 - Chromium was exercised. Safari, Firefox, actual iOS/Android devices, screen-reader behavior, and a formal accessibility conformance assessment remain outside this run.
 - Persisted drafts use browser-local storage and include report text. They are not encrypted by the application and remain available to the same browser profile. Storage failure is surfaced; this audit does not assess a clinical institution's device or access-control policy.
 - Copying or manually editing text is not a complete clinical consistency check. Structured validation cannot establish the correctness of arbitrary free text or independently verify images.
-- The correction commit updates `main` and the GitHub Pages editor. The existing `v1.7.0` tag remains the historical pre-audit release; no new tagged release is included in this push.
+- Patch release v1.7.1 includes the corrections and updates the GitHub Pages editor. The existing v1.7.0 tag remains the historical pre-audit release.

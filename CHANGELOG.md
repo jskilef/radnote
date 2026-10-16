@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.7.1 — 2026-10-16
+
+- Fixed unsupported positive findings from limited-assessment selections.
+- Removed contradictory bleeding exclusions and postoperative normal-passage statements.
+- Corrected inherited and resolved courses, including derived shift/herniation findings and historical/current comparisons.
+- Required explicit, consistent distal runoff observations for vessel counts; retained vessel-level runoff through status changes.
+- Hardened MRA generation against malformed state.
+- Added the audit report and 14 audit regression checks plus browser coverage. The complete verification includes 120 rule/model checks, configuration checks and ten browser suites.
+
 ## 1.7.0 — 2026-10-15
 
 - Added integrated Head CT, universal skeletal radiography, and esophagram report builders to the existing compact selector.

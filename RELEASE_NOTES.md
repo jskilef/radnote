@@ -1,15 +1,11 @@
-# Radnote v1.7.0 — CCT, Röntgen-Skelett und Breischluck
+# Radnote v1.7.1 — Audit-Korrekturen
 
-Drei vollständig integrierte Befundbaukästen im bestehenden Dropdown:
+- Keine erfundenen Reflux- oder Degenerationsbefunde bei eingeschränkter Beurteilbarkeit.
+- Widerspruchsfreie Blutungsbeurteilung und postoperative Passageformulierungen.
+- Korrekte Übernahme von Verlaufsangaben; abgeheilte Befunde erzeugen keine aktuellen Shift- oder Herniationsaussagen.
+- Abstromzahlen nur bei ausdrücklich dokumentierten, konsistenten distalen Abstromangaben. Gefäßbezogene Angaben bleiben bei Statuswechsel erhalten.
+- Robuste Validierung unvollständiger MR-Angiographie-Daten.
 
-- **CT Schädel:** Routine, Trauma, Stroke und Verlauf; Blutungen, Ischämie, ASPECTS rechts/links, Liquorräume/Masseneffekt, Raumforderungen, Kalotte und weitere anatomische Kategorien. Befund und Beurteilung getrennt.
-- **Röntgen-Skelett:** 21 Regionen mit passenden Projektionen, regionalen Frakturmasken, Arthrosen, Implantaten und Wirbelsäulensegmenten. Garden, Weber und Meyerding werden nur bei dokumentierten Voraussetzungen ausgegeben. Ein gemeinsamer Text.
-- **Breischluck:** Routine, Achalasie, POEM, Z-POEM, Fundoplikatio, Ösophagektomie und sonstige postoperative Kontrollen. Morphologie, Passage, Stenosen, Divertikel, Hernien, beobachteter Reflux und Extravasation; getrennte Ausgabe.
+Validierung: 120 Regel-/Modellprüfungen, Konfigurationsprüfungen und zehn Browser-Testreihen bestanden. Keine bekannten Abhängigkeitslücken im Audit vom 16.10.2026.
 
-Gemeinsame regelbasierte Generierung, drei Stile, strukturierte Favoriten, Vergleich, geschützte manuelle Vorschau mit Wiederherstellung und Übernahme mit Anhängen/Ersetzen/Abbrechen. Die vorhandenen Fixierungen, Rückgängig-Funktionen, Entwürfe und Themes bleiben integriert. Keine neue Laufzeitabhängigkeit oder externe KI-API.
-
-Konfigurationsformat v2 sichert auch die neuen Favoriten und Vorschau-Einstellungen. Bestehende v1-Konfigurationen und Makrodateien bleiben ladbar.
-
-[Live-Editor](https://jskilef.github.io/radnote/) · [HTML-Datei](https://github.com/jskilef/radnote/raw/refs/tags/v1.7.0/index.html) · [Architektur, Datenmodelle, medizinische Regeln und Grenzen](https://github.com/jskilef/radnote/blob/v1.7.0/builders/README.md)
-
-Validierung: 43 neue Regel-/Modelltests, vollständiger Browserworkflow aller drei Module einschließlich frischem Browser für Favoritenimport und sämtliche bisherigen Thorax-, MRA-, Konfigurations- und Editor-Regressionen.
+[Live-Editor](https://jskilef.github.io/radnote/?v=1.7.1) · [HTML-Datei](https://github.com/jskilef/radnote/raw/refs/tags/v1.7.1/index.html) · [Auditbericht](https://github.com/jskilef/radnote/blob/v1.7.1/AUDIT.md)

@@ -2,7 +2,7 @@
 
 A standalone radiology report editor. German is the default language, with an English switch. Runs directly in a browser, without a backend or external dependencies.
 
-**Current version: 1.7.0**
+**Current version: 1.7.1**
 
 **Live editor:** https://jskilef.github.io/radnote/
 
@@ -93,7 +93,7 @@ GitHub Pages serves the root of the `main` branch. `.nojekyll` enables direct st
 
 Install development dependencies with `npm install`, then install a browser with `npx playwright install chromium` and run `npm test`. To use an existing browser, set `RADNOTE_CHROMIUM_PATH` to its executable path. No dependencies are needed to use the editor itself.
 
-The [16 October 2026 audit](AUDIT.md) documents reproduced defects, corrections, regression coverage, and verification limits. These corrections follow the v1.7.0 release on `main`.
+The [16 October 2026 audit](AUDIT.md) documents reproduced defects, corrections, regression coverage, and verification limits. These corrections are included in v1.7.1.
 
 ## Versioning and releases
 
