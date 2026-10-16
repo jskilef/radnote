@@ -85,13 +85,15 @@ See [the clinical and data notice](CLINICAL_NOTICE.md) for the German/English us
 
 ## Deployment
 
-Run `npm run build` after source changes. `src/editor.html`, `mra/` and `chest/` are the editable sources; the build embeds them into the standalone `index.html`. No new runtime dependencies are required.
+Run `npm run build` after source changes. `src/editor.html`, `mra/`, `chest/`, `builders/`, and `settings/` are the editable sources; the build embeds them into the standalone `index.html`. No new runtime dependencies are required.
 
 GitHub Pages serves the root of the `main` branch. `.nojekyll` enables direct static hosting. Update `index.html` and push to `main` to publish a change.
 
 ## Validation
 
 Install development dependencies with `npm install`, then install a browser with `npx playwright install chromium` and run `npm test`. To use an existing browser, set `RADNOTE_CHROMIUM_PATH` to its executable path. No dependencies are needed to use the editor itself.
+
+The [16 October 2026 audit](AUDIT.md) documents reproduced defects, corrections, regression coverage, and verification limits. These corrections follow the v1.7.0 release on `main`.
 
 ## Versioning and releases
 

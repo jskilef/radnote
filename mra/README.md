@@ -20,7 +20,7 @@ Optionale Abschnitte (z. B. Aortenwurzel und akzessorische Nierenarterien) müss
 
 Läsionen werden als Liste pro Gefäß gespeichert. Stenosegrade, pathologische Morphologie, Lokalisation, Maße, Ausdehnung, Kollateralen, Rekonstitution und Abstrom sind voneinander unabhängige, ausdrücklich dokumentierte Angaben. Eine nicht gewählte Zusatzangabe wird nicht ergänzt. Grad-/Prozentkonflikte, unvollständige Läsionen und ungültige Maße sperren die Übernahme, bis die Eingabe korrigiert wurde.
 
-Eine Abstromzahl wird nur ausgegeben, wenn für A. tibialis anterior, A. tibialis posterior und A. fibularis derselben Seite jeweils explizit ein durchgängiger Abstrom oder ein Verschluss dokumentiert wurde. Eine Normalmarkierung allein wird nicht zu einer Abstromzahl umgedeutet. Bei dokumentiertem distalem Abstrom trotz proximalem Verschluss zählt die explizite distale Durchgängigkeit.
+Eine Abstromzahl wird nur ausgegeben, wenn für A. tibialis anterior, A. tibialis posterior und A. fibularis derselben Seite jeweils explizit ein durchgängiger oder fehlender distaler Abstrom dokumentiert wurde. Eine Normalmarkierung oder ein Verschluss allein wird nicht zu einer Abstromzahl umgedeutet. Bei dokumentiertem distalem Abstrom trotz proximalem Verschluss zählt die explizite distale Durchgängigkeit. Widersprüchliche Abstromangaben desselben Gefäßes sperren die Übernahme bis zum Abgleich; aus reduzierten oder nicht beurteilbaren Abstromangaben wird keine Gefäßzahl abgeleitet.
 
 Die Beurteilung priorisiert Dissektion, vollständigen/subtotalen Verschluss, Thrombose, Aneurysma und höhergradige Stenosen. Diese feste Reihenfolge ist eine Sortierregel; sie nimmt keine undokumentierte Akuität an.
 

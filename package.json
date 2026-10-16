@@ -5,7 +5,7 @@
   "description": "Standalone radiology report editor",
   "license": "MIT",
   "scripts": {
-    "test": "npm run build && node tests/builders-engine.cjs && node tests/config.cjs && node tests/chest-engine.cjs && node tests/mra-engine.cjs && node tests/report-editor.cjs && node tests/templates.cjs && node tests/word-macros.cjs && node tests/undo.cjs && node tests/mra-ui.cjs && node tests/chest-ui.cjs && node tests/chest-macros.cjs && node tests/config-ui.cjs && node tests/builders-ui.cjs",
+    "test": "npm run build && node tests/audit-engine.cjs && node tests/builders-engine.cjs && node tests/config.cjs && node tests/chest-engine.cjs && node tests/mra-engine.cjs && node tests/report-editor.cjs && node tests/templates.cjs && node tests/word-macros.cjs && node tests/undo.cjs && node tests/mra-ui.cjs && node tests/chest-ui.cjs && node tests/chest-macros.cjs && node tests/config-ui.cjs && node tests/builders-ui.cjs && node tests/audit-ui.cjs",
     "build": "node scripts/build.cjs"
   },
   "devDependencies": {

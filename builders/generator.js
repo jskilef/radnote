@@ -1,5 +1,8 @@
 (function(root,factory){const node=typeof module==='object'&&module.exports;const api=factory(node?require('./registry.js'):root.ExaminationRegistry,node?require('./state.js'):root.BuilderState,node?require('./validation.js'):root.BuilderValidation,node?require('./text.js'):root.BuilderText,node?require('./preview.js'):root.ExamPreview,node?{head:require('./head-generator.js'),skeleton:require('./skeleton-generator.js'),esophagram:require('./esophagram-generator.js')}:{head:root.HeadCTGenerator,skeleton:root.SkeletonGenerator,esophagram:root.EsophagramGenerator});if(node)module.exports=api;else root.ReportGenerator=api})(globalThis,function(R,S,V,T,P,generators){'use strict';
- function generate(id,raw){const s=S.sanitize(id,raw),d=R.get(id),check=V.validate(id,s);let records=generators[id].generate(s).filter(r=>r.text&&(!d.categories.find(c=>c.id===r.category)?.when||d.categories.find(c=>c.id===r.category).when(s)));
+ function generate(id,raw){const s=S.sanitize(id,raw),d=R.get(id);
+  // Resolve inherited courses before clinical conflict checks and derived findings.
+  for(const c of d.categories)for(const field of c.fields)if(field.type==='list'&&Array.isArray(s.findings[c.id][field.key]))for(const item of s.findings[c.id][field.key])if('course' in item)item.course=item.course||s.findings[c.id].course;
+  const check=V.validate(id,s);let records=generators[id].generate(s).filter(r=>r.text&&(!d.categories.find(c=>c.id===r.category)?.when||d.categories.find(c=>c.id===r.category).when(s)));
   records=records.map(r=>({...r,course:r.course||s.findings[r.category]?.course||''}));
   records=records.map(r=>({...r,text:T.course(r.text,r.course,s.comparison),impression:r.impression?T.course(T.sentence(r.impression),r.course,s.comparison):'',priority:r.course==='resolved'?80:r.priority}));
   // Acute findings precede incidental findings; selected mode orders equal priorities.
@@ -22,7 +25,7 @@
    else if(!hasPathology&&records.some(r=>r.normal))impression=['Die ausdrücklich als unauffällig beurteilten Strukturen zeigen keinen pathologischen Befund.'];
    else impression=pathological.slice(0,4).map(r=>r.text);
   }
-  if(id==='head'&&s.mode==='stroke'&&s.findings.hemorrhage.status==='normal'&&hasPathology)impression.push('Keine intrakranielle Blutung.');
+  if(id==='head'&&s.mode==='stroke'&&records.some(r=>r.category==='hemorrhage'&&r.normal)&&hasPathology)impression.push('Keine intrakranielle Blutung.');
   if(id==='head'&&(s.findings.ischemia.status==='normal'||s.mode==='stroke'&&records.length)&&s.context.examination!=='contrast')impression.push(s.context.examination==='native'?'Eine frühe zerebrale Ischämie ist im nativen CT nicht sicher auszuschließen.':'Eine frühe zerebrale Ischämie ist CT-morphologisch nicht sicher auszuschließen.');
   if(s.context.quality&&s.context.quality!=='normal'&&records.length)impression.push('Aussagekraft durch die dokumentierte Untersuchungsqualität eingeschränkt.');
   return {befund:parts.join(' '),beurteilung:d.reportStructure==='separate'?impression.join(' '):'',reportStructure:d.reportStructure,...check,assessed:d.categories.filter(c=>s.findings[c.id].status!=='pending').length,records};
