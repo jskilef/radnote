@@ -6,7 +6,7 @@
  const sentence=value=>value?value.trim().replace(/[.\s]+$/,'')+'.':'';
  const lower=value=>value?value[0].toLowerCase()+value.slice(1):'';
  const mm=value=>String(value).replace('.',',');
- function course(text,value,comparison){if(!text||!comparison.enabled||!value)return text;const words={new:'neu aufgetretener Befund',stable:'unveränderter Befund',decreased:'regredienter Befund',increased:'progredienter Befund'};if(value==='resolved')return 'Der zuvor beschriebene Befund ist nicht mehr nachweisbar („'+text.replace(/\.$/,'')+'“).';return 'Im Vergleich '+words[value]+': '+text}
+ function course(text,value,comparison){if(!text||!comparison.enabled||!value)return text;const words={new:'Neu aufgetreten',stable:'Im Vergleich unverändert',decreased:'Im Vergleich regredient',increased:'Im Vergleich progredient',resolved:'Nicht mehr nachweisbar'};return (words[value]||'Im Vergleich')+': '+text}
  function record(text,category,extra={}){return {text:sentence(text),category,priority:30,normal:false,...extra}}
  return {side,adjective,join,enumeration,sentence,lower,mm,course,record};
 });

@@ -1,11 +1,14 @@
-# Radnote v1.7.1 — Audit-Korrekturen
+# Radnote v1.7.2 — Radiologische Terminologie
 
-- Keine erfundenen Reflux- oder Degenerationsbefunde bei eingeschränkter Beurteilbarkeit.
-- Widerspruchsfreie Blutungsbeurteilung und postoperative Passageformulierungen.
-- Korrekte Übernahme von Verlaufsangaben; abgeheilte Befunde erzeugen keine aktuellen Shift- oder Herniationsaussagen.
-- Abstromzahlen nur bei ausdrücklich dokumentierten, konsistenten distalen Abstromangaben. Gefäßbezogene Angaben bleiben bei Statuswechsel erhalten.
-- Robuste Validierung unvollständiger MR-Angiographie-Daten.
+Alle fünf Befundbaukästen verwenden überarbeitete deutsche Auswahlbegriffe und Befundformulierungen. Grundlage sind DRG/AGIT-Vorlagen und etablierte radiologische Ressourcen; Quellen und die eigene Bearbeitung sind dokumentiert und im Editor verlinkt.
 
-Validierung: 120 Regel-/Modellprüfungen, Konfigurationsprüfungen und zehn Browser-Testreihen bestanden. Keine bekannten Abhängigkeitslücken im Audit vom 16.10.2026.
+- **Röntgen-Thorax:** präzisere morphologische Begriffe, lineare/subsegmentale Atelektasen und klare Trennung von Verdichtung und Pneumonieverdacht.
+- **CCT:** gefäßbezogenes hyperdenses Arterienzeichen, chronische postischämische Defekte, anatomische ASPECTS-Beschriftungen und passende Lokalisationen.
+- **Röntgen-Skelett:** eindeutige Frakturformulierungen, korrekte Dislokationsrichtungen und Bandscheibenfachbeschreibungen; keine automatisch unterstellte Kompression oder Diabetesursache.
+- **MR-Angiographie:** korrekte Gefäßnamen, Lumenkonturbegriffe und grammatische Gefäßlokalisationen.
+- **Ösophagographie:** präzise Beschreibung von Passage und extraluminalem Kontrastmittelaustritt; Mageninterponat nur bei erfasstem Magenhochzug.
+- Gespeicherte IDs und Favoriten bleiben kompatibel. Ungeeignete anatomische Altwerte bleiben sichtbar und werden zur Korrektur markiert. Eigene Textbausteine und manuell bearbeitete Vorschauen werden nicht überschrieben.
 
-[Live-Editor](https://jskilef.github.io/radnote/?v=1.7.1) · [HTML-Datei](https://github.com/jskilef/radnote/raw/refs/tags/v1.7.1/index.html) · [Auditbericht](https://github.com/jskilef/radnote/blob/v1.7.1/AUDIT.md)
+Validierung: 146 Regel-/Modellprüfungen einschließlich 26 neuer Terminologieprüfungen, Konfigurationsprüfungen und elf Browser-Testreihen. Mobile Darstellung in Hell- und Dunkelmodus geprüft.
+
+[Live-Editor](https://jskilef.github.io/radnote/?v=1.7.2) · [HTML-Datei](https://github.com/jskilef/radnote/raw/refs/tags/v1.7.2/index.html) · [Quellen und Änderungen](https://github.com/jskilef/radnote/blob/v1.7.2/TERMINOLOGY.md)

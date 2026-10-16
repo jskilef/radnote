@@ -11,7 +11,7 @@
   const necessary={head:['hemorrhage','skull','ischemia'],skeleton:['fractures','alignment'],esophagram:['extravasation']}[id];
   if(s.style==='short'&&hasPathology)records=records.filter(r=>!r.normal||necessary.includes(r.category));
   const parts=[];
-  if(s.comparison.enabled){parts.push(s.comparison.date?'Vergleich mit der Voruntersuchung vom '+s.comparison.date.split('-').reverse().join('.')+'.':'Vergleich mit dokumentierter Voruntersuchung.')}
+  if(s.comparison.enabled){parts.push(s.comparison.date?'Vergleich mit der Voruntersuchung vom '+s.comparison.date.split('-').reverse().join('.')+'.':'Vergleich mit der Voruntersuchung.')}
   if(id==='skeleton'&&records.length){const region=d.selectedRegion(s);parts.push(T.join(['Untersuchungsregion:',region?.label,T.side(s.context.side)])+'.')}
   if(id==='head'&&s.context.quality&&s.context.quality!=='normal')parts.push({motion:'Beurteilbarkeit durch Bewegungsartefakte eingeschränkt.',metal:'Beurteilbarkeit durch Metallartefakte eingeschränkt.',limited:'Eingeschränkte Beurteilbarkeit der Untersuchung.'}[s.context.quality]);
   if(id!=='head'&&s.context.quality==='limited')parts.push('Eingeschränkte Beurteilbarkeit'+(s.context.limitation?' durch '+s.context.limitation:'')+'.');
@@ -22,12 +22,12 @@
   if(!impression.length&&records.length){
    const complete=id==='head'?allNormal(['parenchyma','hemorrhage','ischemia','csf','mass','skull']):id==='esophagram'?allNormal(['morphology','motility','stenosis','diverticula','reflux']):false;
    if(!hasPathology&&complete&&!check.errors.length&&(!s.context.quality||s.context.quality==='normal'))impression=[id==='head'?'Kein Nachweis einer akuten intrakraniellen Pathologie'+(s.context.examination==='contrast'?' im kontrastmittelgestützten CT.':s.context.examination==='native'?' im nativen CT.':' im CT.'):'Unauffällige Ösophaguspassage.'];
-   else if(!hasPathology&&records.some(r=>r.normal))impression=['Die ausdrücklich als unauffällig beurteilten Strukturen zeigen keinen pathologischen Befund.'];
+   else if(!hasPathology&&records.some(r=>r.normal))impression=['Kein pathologischer Befund in den beurteilten Strukturen.'];
    else impression=pathological.slice(0,4).map(r=>r.text);
   }
   if(id==='head'&&s.mode==='stroke'&&records.some(r=>r.category==='hemorrhage'&&r.normal)&&hasPathology)impression.push('Keine intrakranielle Blutung.');
   if(id==='head'&&(s.findings.ischemia.status==='normal'||s.mode==='stroke'&&records.length)&&s.context.examination!=='contrast')impression.push(s.context.examination==='native'?'Eine frühe zerebrale Ischämie ist im nativen CT nicht sicher auszuschließen.':'Eine frühe zerebrale Ischämie ist CT-morphologisch nicht sicher auszuschließen.');
-  if(s.context.quality&&s.context.quality!=='normal'&&records.length)impression.push('Aussagekraft durch die dokumentierte Untersuchungsqualität eingeschränkt.');
+  if(s.context.quality&&s.context.quality!=='normal'&&records.length)impression.push('Beurteilbarkeit der Untersuchung eingeschränkt.');
   return {befund:parts.join(' '),beurteilung:d.reportStructure==='separate'?impression.join(' '):'',reportStructure:d.reportStructure,...check,assessed:d.categories.filter(c=>s.findings[c.id].status!=='pending').length,records};
  }
  function syncPreview(id,raw){const s=S.sanitize(id,raw),g=generate(id,s),p=s.preview,next=P.sync({befund:p.befund,beurteilung:p.beurteilung},{befund:p.lastBefund,beurteilung:p.lastBeurteilung},{befund:g.befund,beurteilung:g.beurteilung},p.auto);Object.assign(p,next.current,{lastBefund:next.baseline.befund,lastBeurteilung:next.baseline.beurteilung,pending:next.pending});return s}

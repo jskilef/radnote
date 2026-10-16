@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.7.2 — 2026-10-16
+
+- Revised German terminology and report wording across all five builders, with documented DRG/AGIT and radiological references in TERMINOLOGY.md.
+- Distinguished thoracic morphology from diagnostic interpretation; clarified vessel anatomy, infarct terminology, fracture descriptions and postoperative esophageal findings.
+- Added anatomical ASPECTS labels and context-specific CCT localization choices; incompatible legacy locations remain visible and block transfer until corrected.
+- Corrected declension, course wording, spinal disc-space terminology and bounded negative statements. Preserved model IDs, saved favorites and manually edited previews.
+- Added 26 terminology/compatibility checks and browser coverage for selections, old drafts, transfer, version display and mobile themes.
+
 ## 1.7.1 — 2026-10-16
 
 - Fixed unsupported positive findings from limited-assessment selections.

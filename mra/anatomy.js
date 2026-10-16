@@ -18,8 +18,8 @@ for(const seg of ['M1','M2'])add('mca-'+seg.toLowerCase(),'A. cerebri media ('+s
 for(const seg of ['P1','P2'])add('pca-'+seg.toLowerCase(),'A. cerebri posterior ('+seg+')',['brain'],true,{genitive:'des '+seg+'-Segments der A. cerebri posterior'});
 add('pcom','A. communicans posterior',['brain']);add('va-v4','A. vertebralis (V4)',['brain'],true,{genitive:'des V4-Segments der A. vertebralis'});
 add('basilar','A. basilaris',['brain'],false);
-for(const [id,name] of [['pica','A. inferior posterior cerebelli (PICA)'],['aica','A. inferior anterior cerebelli (AICA)'],['sca','A. superior cerebelli'],['ophthalmic','A. ophthalmica']])add(id,name,['brain'],true,{optional:true});
-add('cca','A. carotis communis',['neck']);add('bifurcation','Carotisbifurkation',['neck']);add('ica-extra','A. carotis interna, extrakranieller Abschnitt',['neck'],true,{genitive:'des extrakraniellen Abschnitts der A. carotis interna'});add('eca','A. carotis externa',['neck']);
+for(const [id,name] of [['pica','A. cerebelli inferior posterior (PICA)'],['aica','A. cerebelli inferior anterior (AICA)'],['sca','A. cerebelli superior (SCA)'],['ophthalmic','A. ophthalmica']])add(id,name,['brain'],true,{optional:true});
+add('cca','A. carotis communis',['neck']);add('bifurcation','Karotisbifurkation',['neck']);add('ica-extra','A. carotis interna, extrakranieller Abschnitt',['neck'],true,{genitive:'des extrakraniellen Abschnitts der A. carotis interna'});add('eca','A. carotis externa',['neck']);
 for(const seg of ['V1','V2','V3'])add('va-'+seg.toLowerCase(),'A. vertebralis ('+seg+')',['neck'],true,{genitive:'des '+seg+'-Segments der A. vertebralis'});
 add('brachiocephalic','Truncus brachiocephalicus',['neck','thorax'],false,{genitive:'des Truncus brachiocephalicus'});
 add('subclavian','A. subclavia',['neck','arm-r','arm-l']);

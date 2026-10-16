@@ -2,9 +2,13 @@
 
 A standalone radiology report editor. German is the default language, with an English switch. Runs directly in a browser, without a backend or external dependencies.
 
-**Current version: 1.7.1**
+**Current version: 1.7.2**
 
 **Live editor:** https://jskilef.github.io/radnote/
+
+## Fachliche Terminologie
+
+Alle fünf Baukästen verwenden überarbeitete deutsche Auswahlbegriffe und Befundformulierungen, orientiert an DRG/AGIT-Vorlagen sowie Fleischner-, AO- und ACR-Ressourcen. [Quellen, konkrete Änderungen und Aussagegrenzen](TERMINOLOGY.md) sind dokumentiert. Eigene Texte und manuell bearbeitete Vorschauen bleiben erhalten.
 
 ## Features
 
@@ -29,7 +33,7 @@ A standalone radiology report editor. German is the default language, with an En
 
 Drei weitere vollständig integrierte Baukästen sind über dasselbe Dropdown erreichbar:
 
-- **CT Schädel:** Routine/Trauma/Stroke/Verlauf, Blutungen und Infarkte, Liquorräume/Masseneffekt, Raumforderungen, Kalotte, Nebenhöhlen, Gefäßverkalkungen und beidseitige ASPECTS-Bewertung. Befund und Beurteilung getrennt.
+- **CT Schädel:** Routine/Trauma/Schlaganfall/Verlauf, Blutungen und Infarkte, Liquorräume/Masseneffekt, Raumforderungen, Kalotte, Nebenhöhlen, Gefäßverkalkungen und beidseitige ASPECTS-Bewertung. Befund und Beurteilung getrennt.
 - **Röntgen-Skelett:** 21 Regionen, regionsabhängige Befunde/Projektionen, Frakturmasken, Implantate, Wirbelsäulensegmente und geprüfte Voraussetzungen für Garden/Weber/Meyerding. Ein gemeinsamer Text.
 - **Breischluck:** Routine, Achalasie, POEM, Z-POEM, Fundoplikatio, Ösophagektomie und weitere postoperative Kontrollen. Passage, Morphologie, Stenosen, Divertikel, Hernien, Reflux und Extravasation; Befund und Beurteilung getrennt.
 
@@ -93,7 +97,7 @@ GitHub Pages serves the root of the `main` branch. `.nojekyll` enables direct st
 
 Install development dependencies with `npm install`, then install a browser with `npx playwright install chromium` and run `npm test`. To use an existing browser, set `RADNOTE_CHROMIUM_PATH` to its executable path. No dependencies are needed to use the editor itself.
 
-The [16 October 2026 audit](AUDIT.md) documents reproduced defects, corrections, regression coverage, and verification limits. These corrections are included in v1.7.1.
+The [16 October 2026 audit](AUDIT.md) documents reproduced defects, corrections, regression coverage, and verification limits. These corrections are included in v1.7.2.
 
 ## Versioning and releases
 
